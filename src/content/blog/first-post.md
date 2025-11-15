@@ -1,16 +1,63 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'Clean Code'
+description: 'A practical overview of core clean code principles and how to apply them in everyday development.'
+pubDate: 'Nov 15 2025'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Writing clean code is one of the most important skills for any software developer.  
+It doesn’t matter how fast you can build something—if the code is hard to read,
+bug-prone, or difficult to extend, the system will eventually slow you down.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+In this post, I want to summarize a few principles I try to follow in my daily work.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+## Meaningful Names
+Good naming is the simplest and most effective way to make code readable.  
+A name should clearly describe *what* something is or *what* it does:
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+- `isActive` is better than `flag`
+- `UserRepository` is better than `Handler`
+- `calculateDiscount` is better than `process`
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+If a name needs a comment to be understood, the name is not good enough.
+
+## Small Functions
+A function should do one thing and do it well.  
+Small functions are easier to test, reason about, and maintain.
+
+When a function grows too large, these are common symptoms:
+- Too many parameters  
+- Nested conditionals  
+- Multiple responsibilities mixed together  
+
+Extracting smaller functions usually improves clarity immediately.
+
+## Avoid Duplication
+Duplicated code is dangerous because fixing a bug in one place does not
+guarantee it’s fixed everywhere else.
+
+Whenever you see code being copied, it’s a good sign that you should:
+- Extract a method  
+- Create a utility  
+- Introduce an abstraction  
+
+Duplication increases the cost of maintenance over time.
+
+## Fail Fast
+Clean code makes invalid states impossible or easy to detect.
+
+Examples:
+- Validate inputs early  
+- Throw exceptions instead of silently ignoring errors  
+- Make illegal states unrepresentable with strong types  
+
+Failing fast helps catch problems sooner and keeps the system predictable.
+
+## Final Thoughts
+Clean code is not about perfection.  
+It’s about writing code that you and others can understand, modify, and extend
+with confidence.
+
+This is a continuous practice, and the goal of this blog is to document what I
+learn as I try to apply these principles in real projects.
+
