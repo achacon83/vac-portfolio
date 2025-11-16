@@ -13,19 +13,34 @@ In this post, I want to summarize a few principles I try to follow in my daily w
 
 ## Meaningful Names
 Good naming is the simplest and most effective way to make code readable.  
-A name should clearly describe *what* something is or *what* it does:
+A name should clearly describe *why* it exists, *what* it does, and *how* is it used:
 
 - `isActive` is better than `flag`
 - `UserRepository` is better than `Handler`
 - `calculateDiscount` is better than `process`
 
 If a name needs a comment to be understood, the name is not good enough.
+Avoid words whose entrenched meanings vary from our intended meaning:
+
+- `hp`, `aix`, and `sco` would be poor variable names
+- `accounts` is better than `accountlist`
+
+## Class Names
+Classes and object should have noun or noun phrase names like `Customer`, `WikiPage`, and `Account`. Avoid words like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb. Examples:
+
+## Method Names
+Methods should have verb or verb phrase names like `postPayment`, `deletePage` or `save`. Accessors, mutators, and predicates should be named for their value and prefixed with `get`, `set`, and `is` according to the javabean standard.
+
+When constructors are overloaded, use static factory methods with names that describe the arguments. For example:
+
+`Complex point = Complex.fromRealNumber(23.0);`
 
 ## Small Functions
 A function should do one thing and do it well.  
 Small functions are easier to test, reason about, and maintain.
 
 When a function grows too large, these are common symptoms:
+
 - Too many parameters  
 - Nested conditionals  
 - Multiple responsibilities mixed together  
