@@ -1,7 +1,7 @@
 ---
 title: 'Clean Code'
 description: 'A practical overview of core clean code principles and how to apply them in everyday development.'
-pubDate: 'Nov 15 2025'
+pubDate: 'November 15, 2025'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 
@@ -13,7 +13,7 @@ In this post, I want to summarize a few principles I try to follow in my daily w
 
 ## Meaningful Names
 Good naming is the simplest and most effective way to make code readable.  
-A name should clearly describe *why* it exists, *what* it does, and *how* is it used:
+A name should clearly describe *why* it exists, *what* it does, and *how* it is used:
 
 - `isActive` is better than `flag`
 - `UserRepository` is better than `Handler`
@@ -23,13 +23,15 @@ If a name needs a comment to be understood, the name is not good enough.
 Avoid words whose entrenched meanings vary from our intended meaning:
 
 - `hp`, `aix`, and `sco` would be poor variable names
-- `accounts` is better than `accountlist`
+- `accounts` is better than `accountList`
 
 ## Class Names
-Classes and object should have noun or noun phrase names like `Customer`, `WikiPage`, and `Account`. Avoid words like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb. Examples:
+Classes and objects should have noun or noun-phrase names like `Customer`, `WikiPage`, and `Account`. Avoid words like `Manager`, `Processor`, `Data`, or `Info`. A class name should not be a verb.
+
+Examples: `Customer`, `Order`, `Invoice`.
 
 ## Method Names
-Methods should have verb or verb phrase names like `postPayment`, `deletePage` or `save`. Accessors, mutators, and predicates should be named for their value and prefixed with `get`, `set`, and `is` according to the javabean standard.
+Methods should have verb or verb-phrase names like `postPayment`, `deletePage`, or `save`. Accessors, mutators, and predicates should be named for their value and prefixed with `get`, `set`, and `is` according to the JavaBeans standard.
 
 When constructors are overloaded, use static factory methods with names that describe the arguments. For example:
 
@@ -75,4 +77,3 @@ with confidence.
 
 This is a continuous practice, and the goal of this blog is to document what I
 learn as I try to apply these principles in real projects.
-
